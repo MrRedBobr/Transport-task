@@ -1,0 +1,12 @@
+.table {
+	display: grid;
+	grid-template-columns: 50px auto;
+	grid-template-rows: 20px auto;
+}
+.table input {
+	border: 1px solid rgb(90, 30, 219);
+	width: 48px;
+	text-align: center;
+	background: transparent;
+	border-radius: 3px;
+}

@@ -119,7 +119,7 @@ module.exports = {
 	},
 	optimization: optimization(),
 	devServer: {
-		port: 3009
+		port: 3000
 	},
 	devtool: isDev ? 'source-map' : '',
 	plugins: plugins(),
