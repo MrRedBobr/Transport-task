@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 import InputTable from './components/InputTable.jsx';
-import NorthWestNode from './components/NorthWestNode.jsx';
+import Methods from './components/Methods.jsx';
 
 const defaultSettings = {
 	masA: [140, 160, 130],
@@ -16,6 +16,6 @@ const defaultSettings = {
 
 ReactDom.render(<React.Fragment>
 	<InputTable settings={defaultSettings}/>
-	<NorthWestNode />
+	<Methods />
 </React.Fragment>,
 document.getElementById('cont'));
