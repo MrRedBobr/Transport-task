@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
+import './main.css';
 import InputTable from './components/InputTable.jsx';
 import Methods from './components/Methods.jsx';
 

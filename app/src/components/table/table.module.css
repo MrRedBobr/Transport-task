@@ -4,10 +4,42 @@
 	grid-template-columns: 50px auto;
 	grid-template-rows: 20px auto;
 }
+.table, .table button, .table input, .text{
+	color: #b8d344;
+}
 .table input {
 	border: 1px solid rgb(90, 30, 219);
 	width: 48px;
 	text-align: center;
 	background: transparent;
 	border-radius: 3px;
+}
+.table input:focus, .table button:focus, .ansverButton:focus, .ansverButton:focus{
+	box-shadow: 0 0 35px rgb(126, 74, 240),
+	0 0 10px rgb(255, 0, 98);
+	color: #bd3fb2;
+}
+.table button, .ansverButton{
+	transition: 0.5s;
+	background-color: #6476cf2a;
+	border-radius: 5px;
+	border: 1px solid rgb(100, 42, 226);
+}
+.table button{
+	width: 25px;
+}
+.table button:focus {
+	outline: 0;
+	border-radius: 10px;
+	border: 2px solid rgb(112, 52, 223);
+}
+.ansverButton {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #4a3674e5;
+	color:rgb(224, 112, 155);
+}
+.text{
+	background-color: #252525;
+	display: list-item;
 }

@@ -4,6 +4,7 @@ import style from './table/table.module.css';
 import ColOrRow from './table/ColOrRow.jsx';
 import MasC from './table/MasC.jsx';
 
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
 const Table = (props) => {
 	return <React.Fragment>
 		<div>A\B</div>
@@ -43,6 +44,7 @@ export default class Methods extends React.Component {
 		let masC = Array.from(document.getElementById('C').getElementsByTagName('input')).map(val => Number(val.value)).map((_, i, a) => a.slice(i * masB.length, i * masB.length + masB.length)).filter((el) => el.length);
 		let masH = [];
 		let mas = [];
+		if(masA.reduce(reducer) < masB.reduce(reducer)) return this.setState(()=> ({components: '', str: 'Не сходится'}));
 		for(let i=0; i<masA.length; i++) {
 			masH[i] = [];
 			for(let j=0; j<masB.length; j++) {
@@ -76,6 +78,7 @@ export default class Methods extends React.Component {
 		let masH = arr(masA.length, masB.length);
 		let pushValues = masA.length + masB.length - 1;
 		let mas = [];
+		if(masA.reduce(reducer) < masB.reduce(reducer)) return this.setState(()=> ({components: '', str: 'Не сходится'}));
 		while(pushValues){
 			let mini=0, minj=0, min = 100;
 			for(let i=0; i< masA.length; i++){
@@ -114,10 +117,20 @@ export default class Methods extends React.Component {
 	}
 	render() {
 		return <React.Fragment>
-			<button onClick={this.EastWestNode}>East-West Node method</button>
-			<button onClick={this.MinimalElement}>Minimal element method</button>
-			{this.state.components}
-			{this.state.str}
+			<button 
+			onClick={this.EastWestNode}
+			className={style.ansverButton}>
+				East-West Node method
+			</button>
+			<button 
+			onClick={this.MinimalElement}
+			className={style.ansverButton}>
+				Minimal element method
+			</button>
+			<div className={style.text}>
+				{this.state.components}
+				{this.state.str}
+			</div>
 		</React.Fragment>
 	}
 }
