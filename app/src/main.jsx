@@ -6,17 +6,19 @@ import InputTable from './components/InputTable.jsx';
 import Methods from './components/Methods.jsx';
 
 const defaultSettings = {
-	masA: [140, 160, 130],
-	masB: [150, 100, 100, 80],
+	masA: [10, 20, 30],
+	masB: [15, 20, 25],
 	masC: [
-		[2,3,4,2],
-		[8,4,1,4],
-		[9,7,3,6]
+		[5, 3, 1],
+		[3, 2, 4],
+		[4, 1, 2]
 	]
-}
+};
 
-ReactDom.render(<React.Fragment>
-	<InputTable settings={defaultSettings}/>
-	<Methods />
-</React.Fragment>,
-document.getElementById('cont'));
+ReactDom.render(
+	<React.Fragment>
+		<InputTable settings={defaultSettings} />
+		<Methods />
+	</React.Fragment>,
+	document.getElementById('cont')
+);
